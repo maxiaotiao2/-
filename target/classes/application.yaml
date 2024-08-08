@@ -1,0 +1,35 @@
+server:
+    port: 8080
+
+spring:
+    datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/lvran
+        username: root
+        password: mydear@0605
+    mail:
+        host: smtp.qq.com
+        port: 587
+        username: 2431782085@qq.com
+        password: fkdxwhuvmkzdecae
+        default-encoding: UTF-8
+        properties:
+            mail.smtp:
+                socketFactoryClass: javax.net.ssl.SSLSocketFactory
+                debug: true
+        from: 2431782085@qq.com
+    r2dbc:
+        url: r2dbc:mysql://localhost:3306/lvran?serverTimezoneId=Asia/Shanghai
+        username: root
+        password: mydear@0605
+        name: lvran
+        options:
+            useUnicode: true
+            characterEncoding: utf8
+            serverTimezone: Asia/Shanghai
+            useSSL: false
+            noTimezoneConversion: true
+
+
+myapp:
+    secretKey: your_secret_key_value
